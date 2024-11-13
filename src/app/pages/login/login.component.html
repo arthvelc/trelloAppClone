@@ -1,14 +1,38 @@
-<div class="w-screen h-screen bg-gray-50 relative">
-    <div class="absolute w-full h-full">
-        <img class="absolute w-96 left-0 bottom-0" [src]="imgLeft()" loading="lazy" alt="img-login-left">
-        <img class="absolute w-96 right-0 bottom-0" [src]="imgRight()" loading="lazy" alt="img-login-right">
+<div class="w-screen h-screen bg-gray-50 relative flex justify-center items-center">
+    <!-- Background Images Container -->
+    <div class="absolute inset-0 overflow-hidden">
+        <!-- Left Image -->
+        <img class="absolute w-40 sm:w-56 md:w-72 lg:w-80 xl:w-96 left-0 bottom-0" [src]="imgLeft()" loading="lazy" alt="img-login-left">
+        <!-- Right Image -->
+        <img class="absolute w-40 sm:w-56 md:w-72 lg:w-80 xl:w-96 right-0 bottom-0" [src]="imgRight()" loading="lazy" alt="img-login-right">
     </div>
-    <div class="relative w-full sm:w-8/12 md:w-6/12 lg:w-4/12 m-auto">
-        <header class="pt-6 pb-2 flex justify-center">
-            <img [src]="imgTrello()" loading="lazy" alt="trelloLogo" class="w-56">
+
+    <!-- Login Form Container -->
+    <div class="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-md mx-auto p-4">
+        <!-- Header with Logo -->
+        <header class="pt-4 pb-2 flex justify-center">
+            <img [src]="imgTrello()" loading="lazy" alt="trelloLogo" class="w-40 sm:w-48 md:w-56 lg:w-64">
         </header>
-        <div class="bg-white rounded shadow">
-            <h1>Hola</h1>
+
+        <!-- Login Form Box -->
+        <div class="bg-white rounded-lg shadow-md py-6 px-4 sm:px-8">
+            <div class="mb-6">
+                <h1 class="text-center font-semibold text-lg sm:text-xl md:text-2xl text-gray-800">Log in to Trello</h1>
+                <form novalidate class="space-y-4 mt-4">
+                    <!-- Email Input -->
+                    <div>
+                        <input placeholder="Enter email" type="text" class="w-full rounded bg-gray-50 border-2 border-gray-300 p-2 sm:p-3">
+                    </div>
+                    <!-- Password Input -->
+                    <div>
+                        <input placeholder="Enter password" type="password" class="w-full rounded bg-gray-50 border-2 border-gray-300 p-2 sm:p-3">
+                    </div>
+                    <!-- Submit Button -->
+                    <div>
+                        <button class="text-white w-full px-5 py-2 sm:py-3 font-medium rounded bg-green-600 hover:bg-green-700 transition duration-200" type="submit">Log In</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
